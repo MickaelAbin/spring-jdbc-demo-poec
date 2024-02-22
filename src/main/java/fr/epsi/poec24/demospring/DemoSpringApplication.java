@@ -37,7 +37,7 @@ public class DemoSpringApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        System.out.println(controller.getGreeting());
+//        System.out.println(controller.getGreeting());
 
 
         //Création d'une table utilisateur
@@ -98,15 +98,15 @@ public class DemoSpringApplication implements CommandLineRunner {
             System.out.println("* Erreur d'authentification... merci de recommencer !");
         }*/
 
-        String countQuery = "SELECT count(*) FROM utilisateur";
-        System.out.println("Le nombre d'utilisateurs dans la table est :" +
-                jdbcTemplate.queryForObject(countQuery, Integer.class));
-
-
-        String findAllFournisseursQuery = "SELECT id, nom AS raisonSociale FROM fournisseur";
-        List<Fournisseur> mesFournisseurs = jdbcTemplate.query(findAllFournisseursQuery,
-                new BeanPropertyRowMapper<>(Fournisseur.class));
-        mesFournisseurs.forEach(System.out::println);
+//        String countQuery = "SELECT count(*) FROM utilisateur";
+//        System.out.println("Le nombre d'utilisateurs dans la table est :" +
+//                jdbcTemplate.queryForObject(countQuery, Integer.class));
+//
+//
+//        String findAllFournisseursQuery = "SELECT id, nom AS raisonSociale FROM fournisseur";
+//        List<Fournisseur> mesFournisseurs = jdbcTemplate.query(findAllFournisseursQuery,
+//                new BeanPropertyRowMapper<>(Fournisseur.class));
+//        mesFournisseurs.forEach(System.out::println);
 
     }
 }
